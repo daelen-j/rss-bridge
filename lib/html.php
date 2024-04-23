@@ -77,7 +77,7 @@ function raw(string $s): string
     return $s;
 }
 
-function truncate(string $s, int $length = 600, $marker = '...'): string
+function truncate(string $s, int $length = 700, $marker = '...'): string
 {
     $s = trim($s);
     if (mb_strlen($s) <= $length) {
