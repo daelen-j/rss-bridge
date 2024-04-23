@@ -91,7 +91,7 @@ class FilterBridge extends FeedExpander
             if (mb_strlen($plaintext) < 51) {
                 $item['title'] = $plaintext;
             } else {
-                $pos = strpos($item['content'], ' ', 50);
+                $pos = strpos($item['content'], ' ', 500);
                 $item['title'] = substr($plaintext, 0, $pos);
                 if (strlen($plaintext) >= $pos) {
                     $item['title'] .= '...';
