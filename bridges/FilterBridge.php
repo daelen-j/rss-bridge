@@ -88,10 +88,10 @@ class FilterBridge extends FeedExpander
         if ($this->getInput('title_from_content') && array_key_exists('content', $item)) {
             $content = str_get_html($item['content']);
             $plaintext = $content->plaintext;
-            if (mb_strlen($plaintext) < 51) {
+            if (mb_strlen($plaintext) < 701) {
                 $item['title'] = $plaintext;
             } else {
-                $pos = strpos($item['content'], ' ', 50);
+                $pos = strpos($item['content'], ' ', 700);
                 $item['title'] = substr($plaintext, 0, $pos);
                 if (strlen($plaintext) >= $pos) {
                     $item['title'] .= '...';
